@@ -1,13 +1,13 @@
+//
+//  RNAdvertisingId.m
+//
+//  Created by App Like on 28.09.17.
+//
 
-#import "RNAdvertisingId.h"
+#import <React/RCTBridgeModule.h>
 
-@implementation RNAdvertisingId
+@interface RCT_EXTERN_MODULE(RNAdvertisingId, NSObject)
 
-- (dispatch_queue_t)methodQueue
-{
-    return dispatch_get_main_queue();
-}
-RCT_EXPORT_MODULE()
+RCT_EXTERN_METHOD(getAdvertisingId:(RCTResponseSenderBlock)callback)
 
 @end
-  

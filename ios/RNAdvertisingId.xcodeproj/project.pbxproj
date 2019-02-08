@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNAdvertisingId.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAdvertisingId.m */; };
+		0476007D220D9113002E00F2 /* RNAdvertisingId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476007C220D9113002E00F2 /* RNAdvertisingId.swift */; };
+		047600C8220DB66F002E00F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047600C7220DB66F002E00F2 /* Foundation.framework */; };
+		047600CA220DBBB5002E00F2 /* RNAdvertisingId.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAdvertisingId.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRNAdvertisingId.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAdvertisingId.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RNAdvertisingId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAdvertisingId.h; sourceTree = "<group>"; };
+		0476007C220D9113002E00F2 /* RNAdvertisingId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAdvertisingId.swift; sourceTree = "<group>"; };
+		047600C7220DB66F002E00F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		047600C9220DBB5D002E00F2 /* RNAdvertisingId-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNAdvertisingId-Bridging-Header.h"; sourceTree = "<group>"; };
+		134814201AA4EA6300B7C361 /* libRNAdvertisingId.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRNAdvertisingId.a; path = "/Users/spetrone/AppLike/frontend/AdvertisingId/ios/build/Debug-iphoneos/libRNAdvertisingId.a"; sourceTree = "<absolute>"; };
 		B3E7B5891CC2AC0600A0062D /* RNAdvertisingId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAdvertisingId.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,26 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047600C8220DB66F002E00F2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
+		047600C6220DB66F002E00F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libRNAdvertisingId.a */,
+				047600C7220DB66F002E00F2 /* Foundation.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* RNAdvertisingId.h */,
+				0476007C220D9113002E00F2 /* RNAdvertisingId.swift */,
 				B3E7B5891CC2AC0600A0062D /* RNAdvertisingId.m */,
-				134814211AA4EA7D00B7C361 /* Products */,
+				047600C9220DBB5D002E00F2 /* RNAdvertisingId-Bridging-Header.h */,
+				047600C6220DB66F002E00F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +93,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -112,7 +119,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RNAdvertisingId.m in Sources */,
+				0476007D220D9113002E00F2 /* RNAdvertisingId.swift in Sources */,
+				047600CA220DBBB5002E00F2 /* RNAdvertisingId.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,32 +211,41 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNAdvertisingId;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		58B511F11A9E6C8500147676 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNAdvertisingId;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNAdvertisingId-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNAdvertisingId;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNAdvertisingId-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
