@@ -15,8 +15,10 @@
   ],
   "author": "Santiago Petrone <santiago@applike.info> (https://github.com/santiph)",
   "license": "MIT",
+  "devDependencies": {
+    "react-native": "^0.57.7"
+  },
   "peerDependencies": {
-    "react-native": "^0.41.2",
-    "react-native-windows": "0.41.0-rc.1"
+    "react-native": "^0.57.7"
   }
 }
