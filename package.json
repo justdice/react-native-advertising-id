@@ -1,6 +1,6 @@
 {
   "name": "react-native-advertising-id",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "React Native bridge for fetching advertising info on iOS and Android",
   "repository": {
     "type": "git",
@@ -16,9 +16,9 @@
   "author": "Santiago Petrone <santiago@applike.info> (https://github.com/santiph)",
   "license": "MIT",
   "devDependencies": {
-    "react-native": "^0.57.7"
+    "react-native": "^0.58.4"
   },
   "peerDependencies": {
-    "react-native": "^0.57.7"
+    "react-native": "^0.58.4"
   }
 }
