@@ -36,12 +36,12 @@ Consistent access to Advertising Id (AAID/GAID and IDFA) for Android and iOS on 
   - Add `import com.reactlibrary.RNAdvertisingIdPackage;` to the imports at the top of the file
   - Add `new RNAdvertisingIdPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
-    ```
+    ```gradle
     include ':react-native-advertising-id'
     project(':react-native-advertising-id').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-advertising-id/android')
     ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-    ```
+    ```gradle
       compile project(':react-native-advertising-id')
     ```
 4. Update your `mainfest.xml` and declare that your app is an Ad Manager app, as instructed on [Google's Ad Manager guide](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start#update_your_androidmanifestxml):
