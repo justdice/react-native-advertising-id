@@ -1,0 +1,5 @@
+rootProject.name = 'demo'
+include ':react-native-advertising-id'
+project(':react-native-advertising-id').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-advertising-id/android')
+
+include ':app'
