@@ -1,6 +1,6 @@
 {
   "name": "react-native-advertising-id",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Native bridge for fetching advertising info on iOS and Android",
   "repository": {
     "type": "git",
