@@ -1,5 +1,16 @@
 
 # react-native-advertising-id
+[![npm version](https://badge.fury.io/js/react-native-advertising-id.svg)](https://badge.fury.io/js/react-native-advertising-id)
+
+Consistent access to Advertising Id (AAID/GAID and IDFA) for Android and iOS on React Native.
+
+## TOC
+
+* [Getting started](#getting-started)
+  * [Automatic Linking](#mostly-automatic-installation)
+  * [Manual Linking - iOS](#ios)
+  * [Manual Linking - Android](#android)
+* [Usage](#usage)
 
 ## Getting started
 
@@ -25,29 +36,38 @@
   - Add `import com.reactlibrary.RNAdvertisingIdPackage;` to the imports at the top of the file
   - Add `new RNAdvertisingIdPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-advertising-id'
-  	project(':react-native-advertising-id').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-advertising-id/android')
-  	```
+    ```
+    include ':react-native-advertising-id'
+    project(':react-native-advertising-id').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-advertising-id/android')
+    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
+    ```
       compile project(':react-native-advertising-id')
-  	```
-
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNAdvertisingId.sln` in `node_modules/react-native-advertising-id/windows/RNAdvertisingId.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Advertising.Id.RNAdvertisingId;` to the usings at the top of the file
-  - Add `new RNAdvertisingIdPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
+    ```
+4. Update your `mainfest.xml` and declare that your app is an Ad Manager app, as instructed on [Google's Ad Manager guide](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start#update_your_androidmanifestxml):
+```xml
+<manifest>
+    <application>
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+    </application>
+</manifest>
+```
 
 ## Usage
+`react-native-advertising-id` module provides a method `getAdvertisingId()` that returns a Promise.
+This resolves in an object containing `advertisingId` as a string representing the GAID/AAID or IDFA depending on the platform, and `isLimitAdTrackingEnabled` indicating wether the user opted to restrict the usage of his AdvertisingId or not. (Note: If enabled on iOS, advertisingId will result in an empty string).
 ```javascript
 import RNAdvertisingId from 'react-native-advertising-id';
 
-// TODO: What to do with the module?
-RNAdvertisingId;
+  RNAdvertisingId.getAdvertisingId()
+    .then(response => {
+      this.setState({
+        advertisingId: response.advertisingId,
+        isLimitAdTrackingEnabled: response.isLimitAdTrackingEnabled,
+      });
+    })
+    .catch(error => console.error(error));
 ```
   
