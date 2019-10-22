@@ -28,7 +28,7 @@
 		0476007C220D9113002E00F2 /* RNAdvertisingId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAdvertisingId.swift; sourceTree = "<group>"; };
 		047600C7220DB66F002E00F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		047600C9220DBB5D002E00F2 /* RNAdvertisingId-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNAdvertisingId-Bridging-Header.h"; sourceTree = "<group>"; };
-		134814201AA4EA6300B7C361 /* libRNAdvertisingId.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRNAdvertisingId.a; path = "/Users/spetrone/AppLike/frontend/AdvertisingId/ios/build/Debug-iphoneos/libRNAdvertisingId.a"; sourceTree = "<absolute>"; };
+		B16599D8234BE4D800F24487 /* libRNAdvertisingId.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAdvertisingId.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* RNAdvertisingId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAdvertisingId.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +59,7 @@
 				B3E7B5891CC2AC0600A0062D /* RNAdvertisingId.m */,
 				047600C9220DBB5D002E00F2 /* RNAdvertisingId-Bridging-Header.h */,
 				047600C6220DB66F002E00F2 /* Frameworks */,
+				B16599D8234BE4D800F24487 /* libRNAdvertisingId.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +80,7 @@
 			);
 			name = RNAdvertisingId;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRNAdvertisingId.a */;
+			productReference = B16599D8234BE4D800F24487 /* libRNAdvertisingId.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +103,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -168,6 +170,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -204,6 +207,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -225,7 +229,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNAdvertisingId-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -245,7 +249,7 @@
 				PRODUCT_NAME = RNAdvertisingId;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNAdvertisingId-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

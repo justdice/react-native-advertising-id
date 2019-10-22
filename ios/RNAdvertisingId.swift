@@ -14,7 +14,7 @@ class RNAdvertisingId: NSObject {
         let isAdvertisingTrackingEnabled : Bool = ASIdentifierManager.shared().isAdvertisingTrackingEnabled
         
         let response: NSMutableDictionary = [
-            "isLimitAdTrackingEnabled" : isAdvertisingTrackingEnabled,
+            "isLimitAdTrackingEnabled" : !isAdvertisingTrackingEnabled,
             "advertisingId" : ""
         ]
         
