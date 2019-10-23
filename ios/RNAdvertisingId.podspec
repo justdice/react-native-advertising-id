@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   RNAdvertisingId
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/applike/react-native-advertising-id"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
