@@ -44,7 +44,7 @@ Consistent access to Advertising Id (AAID/GAID and IDFA) for Android and iOS on 
     ```gradle
       compile project(':react-native-advertising-id')
     ```
-4. Update your `mainfest.xml` and declare that your app is an Ad Manager app, as instructed on [Google's Ad Manager guide](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start#update_your_androidmanifestxml):
+4. Update your `AndroidMainfest.xml` and declare that your app is an Ad Manager app, as instructed on [Google's Ad Manager guide](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start#update_your_androidmanifestxml):
 ```xml
 <manifest>
     <application>
