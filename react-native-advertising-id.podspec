@@ -11,8 +11,9 @@ Pod::Spec.new do |s|
   s.homepage     = package['homepage']
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/applike/react-native-advertising-id.git", :tag => "v#{s.version}" }
-  s.source_files  = "ios/**/*.{h,m,swift}"
+  s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
+  s.swift_version= "4.2"
 
   s.dependency "React"
 end
