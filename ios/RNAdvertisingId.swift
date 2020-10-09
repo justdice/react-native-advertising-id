@@ -15,7 +15,7 @@ class RNAdvertisingId: NSObject {
         isAppTrackingEnabled(requestPermission: true){(isAdvertisingTrackingEnabled: Bool) -> Void in
             //use the image that was just retrieved
             let response: NSMutableDictionary = [
-                "isAppTrackingEnabled" : isAdvertisingTrackingEnabled,
+                "isLimitAdTrackingEnabled" : !isAdvertisingTrackingEnabled,
                 "advertisingId" : ""
             ]
             
