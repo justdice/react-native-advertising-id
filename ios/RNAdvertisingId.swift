@@ -36,12 +36,14 @@ class RNAdvertisingId: NSObject {
             if(!requestPermission) {
                 result(ATTrackingManager.trackingAuthorizationStatus == .authorized);
             }
-            ATTrackingManager.requestTrackingAuthorization { status in
-                if (status == .authorized){
-                    result(true);
-                }
-                else {
-                    result(false);
+            else {
+                ATTrackingManager.requestTrackingAuthorization { status in
+                    if (status == .authorized){
+                        result(true);
+                    }
+                    else {
+                        result(false);
+                    }
                 }
             }
         }
