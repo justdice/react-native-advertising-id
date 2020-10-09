@@ -40,6 +40,7 @@ class RNAdvertisingId: NSObject {
                 if (status == .authorized){
                     result(true);
                 }
+                result(false);
             }
         }
         else {
