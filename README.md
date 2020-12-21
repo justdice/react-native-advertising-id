@@ -66,8 +66,18 @@ import RNAdvertisingId from 'react-native-advertising-id';
       this.setState({
         advertisingId: response.advertisingId,
         isLimitAdTrackingEnabled: response.isLimitAdTrackingEnabled,
+        status: response.status,
       });
     })
     .catch(error => console.error(error));
 ```
+
+ **status:**
+
+ App Tracking Transparency status: N/A if ios <= 13, or "restricted", "denied", "authorized"
+
+ More details: 
+
+ * https://developer.apple.com/documentation/apptrackingtransparency
+ * https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/authorizationstatus
   
