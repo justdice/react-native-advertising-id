@@ -2,7 +2,7 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -15,7 +15,6 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 22
@@ -31,7 +30,6 @@ allprojects {
     repositories {
         mavenLocal()
         google()
-        jcenter()
         maven {
             url "$rootDir/../node_modules/react-native/android"
         }
